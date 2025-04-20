@@ -1,19 +1,42 @@
-# Jenkins Installation
+<!-- omit in toc -->
+# Jenkins Installation and Setup
 
-## Table of Contents
+---
+
+<div align="center">
+  <img src="../../resources/images/jenkins/jenkins_banner.webp" alt="Jenkins Installation" width="500">
+</div>
+
+---
+
+- This guide covers the installation and initial setup of Jenkins on macOS and Linux systems
+- Detailed instructions for both Homebrew and WAR file installation methods
+- Includes prerequisites, installation steps, and initial configuration
+
+---
+
 - [Prerequisites](#prerequisites)
-  - [macOS Java Installation](#macos)
-  - [Ubuntu/Debian Java Installation](#ubuntu--debian)
+  - [macOS](#macos)
+  - [Ubuntu / Debian](#ubuntu--debian)
 - [Installing Jenkins on macOS](#installing-jenkins-on-macos)
-  - [Homebrew Installation](#method-1-homebrew-installation-macos)
-  - [WAR File Installation](#method-2-running-jenkins-from-the-war-file-macos-or-cross-platform)
-- [Installing Jenkins on Linux](#installing-jenkins-on-linux-ubuntudebian-example)
-  - [APT Package Manager Installation](#method-1-using-apt-package-manager-debianubuntu)
-  - [WAR File Installation](#method-2-running-jenkins-from-the-war-file-linux)
-- [Initial Setup](#initial-admin-password-and-unlocking-jenkins)
-- [Basic Configuration](#basic-configuration-and-jenkins-interface-overview)
+  - [Method 1: Homebrew Installation (macOS)](#method-1-homebrew-installation-macos)
+    - [Install Homebrew](#install-homebrew)
+    - [Install Jenkins using Homebrew](#install-jenkins-using-homebrew)
+    - [Start the Jenkins service](#start-the-jenkins-service)
+    - [Verify Jenkins is running](#verify-jenkins-is-running)
+  - [Method 2: Running Jenkins from the .war file (macOS or Cross-Platform)](#method-2-running-jenkins-from-the-war-file-macos-or-cross-platform)
+    - [Download the Jenkins WAR](#download-the-jenkins-war)
+    - [Run the WAR file with Java](#run-the-war-file-with-java)
+    - [Access Jenkins UI](#access-jenkins-ui)
+- [Installing Jenkins on Linux (Ubuntu/Debian example)](#installing-jenkins-on-linux-ubuntudebian-example)
+  - [Method 1: Using apt Package Manager (Debian/Ubuntu)](#method-1-using-apt-package-manager-debianubuntu)
+  - [Method 2: Running Jenkins from the .war file (Linux)](#method-2-running-jenkins-from-the-war-file-linux)
+- [Initial Admin Password and Unlocking Jenkins](#initial-admin-password-and-unlocking-jenkins)
+- [Basic Configuration and Jenkins Interface Overview](#basic-configuration-and-jenkins-interface-overview)
+  - [Initial Setup and Configuration](#initial-setup-and-configuration)
 
 ## Prerequisites
+
 Jenkins runs on Java. Ensure you have a Java Development Kit (JDK) installed (JDK 11 or newer is recommended) on your system. You can check with:
 ```bash
 java -version
@@ -21,7 +44,7 @@ java -version
 If Java is not installed, install it (e.g., via Homebrew or apt, or from the OpenJDK distributions) before proceeding.
 
 ### macOS
-``` bash
+```bash
 brew install openjdk@11
 
 # Add it to the shell (for zsh or bash)
@@ -30,7 +53,7 @@ source ~/.zshrc
 ```
 
 ### Ubuntu / Debian
-``` bash
+```bash
 sudo apt update
 sudo apt install -y openjdk-11-jdk
 ```
@@ -42,7 +65,7 @@ On macOS, Jenkins can be installed easily using Homebrew (a package manager for 
 ### Method 1: Homebrew Installation (macOS)
 
 #### Install Homebrew
-``` bash
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
@@ -169,4 +192,6 @@ Once Jenkins is unlocked with the admin password, it will guide you through init
 
 3. **Configure Instance**: Jenkins might ask for an instance configuration (like Jenkins URL). Ensure the URL is correct (especially if Jenkins is accessed remotely). You can change this later in Manage Jenkins > Configure System.
 
-When the setup is complete, you will see the main Jenkins dashboard. 
+When the setup is complete, you will see the main Jenkins dashboard.
+
+---
