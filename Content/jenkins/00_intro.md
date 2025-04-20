@@ -19,15 +19,38 @@
 
 This guide (aimed at intermediate DevOps engineers) will cover the following:
 
-- Installation of Jenkins on macOS and Linux using:
-  - Homebrew
-  - Standard .war file method
-- Basic configuration steps and overview of the Jenkins web interface
-- Creating a Pipeline job that demonstrates:
-  - Running a Docker-based stage
-  - Matrix build (parallel execution) of three Python scripts
-  - Example Groovy pipeline code and Python scripts
+1. **Jenkins Installation and Setup**:
+   - Installation on macOS and Linux using:
+     - Homebrew package manager
+     - Standard .war file method
+   - Basic configuration and initial setup
+   - Admin password and unlocking Jenkins
+   - Jenkins interface overview
 
-Each section is organized with clear instructions, code examples, and file names as they would appear in a repository. By the end, you will have a working Jenkins installation and a sample pipeline job configured.
+2. **Android Device Automation Lab**:
+   - Setting up Android device for automation:
+     - ADB installation and configuration
+     - Device developer options and USB debugging
+     - Python virtual environment setup
+   - Creating Jenkins jobs for Android automation:
+     - Setting up Android device as a Jenkins node
+     - Creating individual automation jobs
+     - Building a pipeline for sequential execution
+   - Example automation tasks:
+     - Browser automation
+     - App interaction
+     - Device controls
+
+Each section includes:
+- Step-by-step instructions
+- Code examples and configuration snippets
+- Troubleshooting guides
+- Best practices for implementation
+
+By the end of this guide, you will have:
+- A working Jenkins installation
+- An Android device configured for automation
+- A complete pipeline for Android device automation
+- Understanding of Jenkins nodes and job configuration
 
 ---
